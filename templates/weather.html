@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <html lang="en">
+        <title>Weather App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="static/style.css" />
+      <script src="script.js"></script>
+    </head>
+  <body>
+    <nav class="navbar"> 
+      <div class="container">         
+        <ul class="listitems">
+          <li><a href="/">Home</a></li> 
+          <li><a href="chatbot">Chat Bot</a></li> 
+          <li><a href="recyclehelper">Recycle Helper</a></li> 
+          <li><a href="weather">Weather Warnings</a></li>
+        </ul> 
+      </div> 
+     </nav> 
+    <section class="weatherApp" id="weather"> 
+      <div class="container"> 
+        <center>
+        <h1>Weather Warning!</h1>
+          <h2>Enter your ZIP code:</h2>
+          <form action="/weather" method="post">
+            <input type="text" name="zipcode" required>
+            <button class="rounded-button" type="submit">Get Weather</button>
+          </form>
+        </center>
+      </div>
+    </section>
+  </body>
+</html>

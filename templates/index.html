@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- HTML code goes in here -->
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>SAM - Sustainibility</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="static/style.css" />
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+  <body>
+
+    <nav class="navbar"> 
+      <div class="container">         
+        <ul class="listitems">
+          <li><a href="">Home</a></li> 
+          <li><a href="chatbot">Chat Bot</a></li> 
+          <li><a href="recyclehelper">Recycle Helper</a></li> 
+          <li><a href="weather">Weather Warnings</a></li>
+        </ul> 
+      </div> 
+     </nav> 
+    <center>
+      <h1>
+        Hi! Im SAM - Your Personal Assistant!
+      </h1>
+    </center>
+      <div id="text"></div>
+  
+
+      <div class="rectangle-box">
+        <div class="left">
+          <img src="static/SAM.png" alt="Image" style="width: 20%; height: auto;">
+        </div>
+        <div class="right">
+          <h2>
+             <p style="color: white;">Our Chatbot utilizes many advanced API’s, such as Slack and Twilio. Similar to various AI assistants, SAMbot can analyse and clarify questions from users and provide brief explanations to any possible query. This assistant is essential for improving efficiency in our world, as it makes educating about change infinitely easier.</p>
+            <form action="/chatbot" method ="get">
+              <button type="submit" class="rounded-button">CHAT BOT!     
+              </button>
+            </form>
+          </h2>
+         
+        </div>
+        
+      </div>
+
+<!-------------BRUHHHHHHH--->
+
+      <div class="rectangle-box">
+        <div class="left">
+          <img src="static/wether.png" alt="Image" style="width: 20%; height: auto;">
+        </div>
+        <div class="right">
+          <h2>
+            <p style="color: white;">Our Weather App helps users by supplying vast amounts of information, such as recommendations for garden maintenance and delivering weather warnings. The numerous features we have included are perfect, as they provide detailed and underrated information that allows users to efficiently prepare for the day, saving valuable time, money, and most importantly, water.
+. </p>
+            <form action="/weather" method ="post">
+              
+              <button type="submit" class="rounded-button">WEATHER!     
+              </button>
+            </form>
+          </h2>
+
+          
+        </div>
+        
+      </div>
+   
+
+      <div class="rectangle-box">
+        <div class="left">
+          <img src="static/recycle.png" alt="Image" style="width: 20%; height: auto;">
+        </div>
+        <div class="right">
+          <h2>
+            <p style="color: white;">Our Recycler Helper is an image analyser, which utilizes machine learning to determine whether the provided object is recyclable or not. If the entity is recyclable, users can be redirected to google maps, which will have already located nearby rubbish. 
+
+. </p>
+            <form action="/recyclehelper" method ="get">
+              
+              <button type="submit" class="rounded-button">RECYCLE DETECTOR!     
+              </button>
+            </form>
+          </h2>
+
+          
+        </div>
+        
+      </div>
+
+    
+    
+    <div class="website-box">
+      <h2>Made By:</h2>
+      <ul>
+        <li>Muhammad Iftikhar</li>
+        <li>Aadi Tiwari</li>
+        <li>Siddharth Malhotra</li>
+        <li>Tejas Chakrapani</li>
+      </ul>
+    </div>
+
+  </body>
+</html>
+
+
+.p5{
+  color: green;
+  font-family: 25px;
+}
+
+<div class="center">
+ <h1>
+   
+   </h1>
+</div>
+<meta http-equiv="Page-exit" content="revealTrans(Duration=4,Transition=12)">
+{% endblock %}

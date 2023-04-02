@@ -1,0 +1,39 @@
+<!-- HTML code goes in here -->
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Recycle Helper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="static/style.css" />
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+  <body>
+    <nav class="navbar"> 
+      <div class="container">         
+        <ul class="listitems">
+          <li><a href="/">Home</a></li> 
+          <li><a href="chatbot">Chat Bot</a></li> 
+          <li><a href="recyclehelper">Recycle Helper</a></li> 
+          <li><a href="weather">Weather Warnings</a></li>
+        </ul> 
+      </div> 
+     </nav>
+    <center>
+      <h1>Upload</h1>
+    
+    <form>
+         <input class="rounded-button" type = "file" name = "upload" accept = "image/*" />
+      </form>
+    </center>
+  <center>
+<button style="margin-top: 10px" class="rounded-button" onclick="window.open('https://www.google.com/maps/search/recycling+centers+near+me/', '_blank')">Find Recycling Near Me</button>
+
+  <center>
+
+</html>
+  </body>
+</html>
+
+
+
+   

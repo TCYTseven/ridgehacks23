@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <title>ChatBot</title>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="static/style.css" />
+      <script src="script.js"></script>
+    </head>
+  <body>
+    <nav class="navbar"> 
+      <div class="container">         
+        <ul class="listitems">
+          <li><a href="/">Home</a></li> 
+          <li><a href="chatbot">Chat Bot</a></li> 
+          <li><a href="recyclehelper">Recycle Helper</a></li> 
+          <li><a href="weather">Weather Warnings</a></li>
+        </ul> 
+      </div> 
+     </nav> 
+    
+    <style>
+      .content {
+        margin-top: 60px;
+        font-family: monospace;
+      }
+
+
+      .navbar-divider {
+        height: 10px; /* adjust height as needed */
+        background:  grad (to right, violet, indigo, blue, green, yellow, orange, red);
+        animation: keyf 2s ease-in-out infinite;
+        margin: 10px 0; /* adjust margin as needed */
+        
+      }
+/*       .navbar-divider {
+        background: linear-gradient(270deg, #0087ff, #51e5f1, #e34141, #bf00ff, #fff400);
+        background-size: 1000% 1000%; */
+
+        -webkit-animation: AnimationName 18s ease infinite;
+        -moz-animation: AnimationName 18s ease infinite;
+        animation: AnimationName 18s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:68% 0%}
+        50%{background-position:33% 100%}
+        100%{background-position:68% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:68% 0%}
+        50%{background-position:33% 100%}
+        100%{background-position:68% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:68% 0%}
+        50%{background-position:33% 100%}
+        100%{background-position:68% 0%}
+    }
+
+
+/*
+      h1 {
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5em;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        text-decoration: none;
+        display: inline-block;
+        padding-bottom: 0.3rem;
+        animation: color-change 10s linear infinite;
+      }
+
+      @keyframes color-change {
+        0% {
+          color: white;
+        }
+        33% {
+          color: blue;
+        }
+        66% {
+          color: red;
+        }
+        100% {
+          color: white;
+        }
+      }
+      h1:hover {
+        transform: translateY(-10px);
+        color: blue;
+        font-size: 80px;
+        transition: all 0.3s ease-in-out;
+      }*/
+    
+      #bgvid {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+
+
+      }
+
+      .content {
+        position: fixed;
+        top: 0;
+        /*background: rgba(0, 0, 0, 0.5);*/
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+      #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+        margin-top: 60px;
+      }
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+      }
+      #textInput {
+        width: 90%;
+        border: none;
+        border-bottom: 3px solid black;
+        font-family: monospace;
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+      .userText {
+        color: black;
+        font-family: monospace;
+        font-size: 17px;
+        text-align: right;
+        line-height: 30px;
+        border-radius: 5px;
+        margin-top: 25px;
+      }
+      .userText span {
+        background-color: #8cfff3;
+        padding: 10px;
+        border-radius: 7px;
+        box-shadow: 8px 7px 6px 5px #888888;
+      }
+      .botText {
+        color: black;
+        font-family: monospace;
+        font-size: 17px;
+        text-align: left;
+        line-height: 30px;
+        background-color: #ffffff ;
+        border-radius: 7px;
+        box-shadow: 8px 7px 6px 5px #888888;
+      }
+      .botText span {
+        padding: 10px;
+        border-radius: 2px;
+      }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        margin-top: 6px;
+        border: 0.0001px solid rgb(0, 0, 1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+        background-size: 50%;
+        border-radius: 8px;
+        height:400px;
+        backdrop-filter: blur(8px);
+        overflow-y: scroll !important;
+        
+      }
+
+
+      .box {
+        border: 0px solid black;
+      }
+
+
+      h3:after {
+      box-shadow: inset 0 0 0 0 #54b3d6;
+      color: #54b3d6;
+      margin: 0 -.25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      font-size: 16px;
+      padding: 15px;
+      margin-bottom: 0%;
+    }
+    h3:hover:after {
+      box-shadow: inset 1000px 0 0 0 #54b3d6;
+      color: rgb(255, 255, 255);
+      content: "#RIDGEHACKS2023";
+      font-family: 'Akira Expanded', sans-serif;
+                                                
+    }
+
+    h1:after {
+      box-shadow: inset 0 0 0 0 #ff6600;
+      display: inline-block;
+      color: #ffffff;
+      margin: 0 -.25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      font-size: 46px;
+      padding: 5px;
+      margin-bottom: 0%;
+      content: "SAMbot";
+      animation: color-change 10s linear infinite;
+      font-family: 'Akira Expanded', sans-serif;
+                                                
+
+      }
+    
+      @keyframes color-change {
+        0% {
+          color: rgb(0, 255, 123);
+        }
+        33% {
+          color: blue;
+        }
+        66% {
+          color: rgb(0, 0, 0);
+        }
+        100% {
+          color: rgb(0, 255, 123);
+        }
+      }
+
+    h1:hover:after {
+      box-shadow: inset 1000px 0 0 0 #ff6600;
+      color: rgb(255, 255, 255);
+      content: "The Only AI You Need!";
+      display: inline-block;
+      font-size: 46;
+    }
+
+    h1 {
+            display: inline-block;
+
+    }
+
+
+
+
+    #myImage {
+      position: absolute;
+      z-index: 1;
+      padding: 15px;
+      width: 120px;
+    }
+
+
+
+
+    .highlight{ 
+    /*display: inline-block;*/
+/*     padding: .25em 0;
+    background: #FFC107; */
+/*     color: #ffffff;
+      font-size: 80 px; */.
+}
+
+
+  
+
+    </style>
+          <video playsinline autoplay muted loop 
+            <source src="static/math.mp4" type="video/mp4">
+          </video>
+  </head>
+    <div class="content">
+      <body>
+        <h3 margins>hey</h3>
+      <center>
+        <h1>
+        </h1 style="display: inline-block>
+        
+      </center>
+      <div class="navbar-divider"></div>
+
+      <div class="box"></div>
+      <div class="boxed">
+        <div>
+          <div id="chatbox">
+            <span><img src = "static\SAM.png" alt = "SAMbot" width = "50"></span>
+            <span><p class="botText">
+              <span>Hey! Im SAM, ask me anything! </span>
+            </p></span>
+          </div>
+          <div id="userInput">
+            <input id="textInput" type="text" name="msg" placeholder="Enter message here..." />
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+      <script>
+        function getBotResponse() {
+          
+          var image = '<img src = "static/SAM.png" alt = "SAM" width = "25">';
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = image+'<p class="botText"><span>' + data + "</span></p>";
+            
+            $("#chatbox").append(botHtml);
+            document
+              .getElementById("userInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+          });
+        }
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+
+        function showImage() {
+          document.getElementById("myImage").style.display = "block";
+        }
+
+        function hideImage() {
+          document.getElementById("myImage").style.display = "none";
+        }
+
+      </script>
+    </div>
+  </body>
+</html>
