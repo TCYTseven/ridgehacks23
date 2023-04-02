@@ -1,0 +1,18 @@
+PROMPT:
+
+hello
+
+==========
+
+RESPONSE:
+
+()
++
++
++# def say_hello():  # Печатаем фразу Hello
++#     print("Hello from the greetings module")
++#
++#
++# def greet(user):  # Печатаем кто приветствуется
++#     print(f"Welcome back, {user}")
++

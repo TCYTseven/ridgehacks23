@@ -1,0 +1,13 @@
+PROMPT:
+
+sdhjaflkdsjf
+
+==========
+
+RESPONSE:
+
+")
+    for i in range(30):
+        final=generate_id(alphabet_chars,alphabet_numbers)
+        print("Id no:{} is {}".format(i+1,final))
+summarize_result()

@@ -1,0 +1,9 @@
+PROMPT:
+
+how do i save energy
+
+==========
+
+RESPONSE:
+
+You can save energy by turning off lights when you leave a room, unplugging electronic devices when they are not in use, and using energy-efficient appliances.

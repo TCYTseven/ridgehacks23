@@ -1,0 +1,40 @@
+PROMPT:
+
+ytryuighfdgjk
+
+==========
+
+RESPONSE:
+
+mliu;
++	
++	while(1) {				// input & output
++		if (cin.eof()) break;
++		
++		cin >> input;
++		cin >> param >> op;
++		
++		switch(op) {
++			case '+':
++				cout << input << " + " << param << " = " << input + param << endl;
++				break;
++			case '-':
++				cout << input << " - " << param << " = " << input - param << endl;
++				break;
++			case '*':
++				cout << input << " * " << param << " = " << input * param << endl;
++				break;
++			case '/':
++				double result;
++				result = (double)input / (double)param;
++				cout << input << " / " << param << " = " << result << endl;
++				cout << input << " % " << param << " = " << input % param << endl;
++				break;
++		}
++		
++	}
++	
++	return 0;
++}
++
++/* github repo: https://github.com/spb7540/OOP_lab3 */

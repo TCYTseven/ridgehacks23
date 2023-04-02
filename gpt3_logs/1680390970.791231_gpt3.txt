@@ -1,0 +1,9 @@
+PROMPT:
+
+hello
+
+==========
+
+RESPONSE:
+
+Hello, my name is umer and you can call me doc. I am here to help you with whatever questions you might have. Please feel free to ask away.

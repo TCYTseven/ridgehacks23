@@ -1,0 +1,9 @@
+PROMPT:
+
+who is steph curry
+
+==========
+
+RESPONSE:
+
+Steph Curry is an American professional basketball player for the Golden State Warriors of the National Basketball Association.

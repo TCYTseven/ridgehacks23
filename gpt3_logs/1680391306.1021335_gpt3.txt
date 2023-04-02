@@ -1,0 +1,26 @@
+PROMPT:
+
+hello
+
+==========
+
+RESPONSE:
+
+" = "name!";
+$hello = "fullname";
+$world = "my";
+$1234 = "number!";
+$and = "you?";
+
+echo $hello + $world, $and;
+
+echo "<br><br>";
+
+$x = "name!";
+$y = "fullname";
+$z = "my";
+$a = "number!";
+$b = "you?";
+
+echo $x + $y + $z + $a + $b;
+?>
